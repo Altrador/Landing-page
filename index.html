@@ -49,24 +49,24 @@
       <div class="hero-bg-grid" aria-hidden="true"></div>
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-content">
-        <div class="hero-badge" data-reveal>
+        <div class="hero-badge hero-animate" style="animation-delay: 0.1s;">
           <span class="badge-dot" aria-hidden="true"></span>
           Available for new projects
         </div>
-        <h1 class="hero-heading" id="hero-heading" data-reveal>
+        <h1 class="hero-heading hero-animate" id="hero-heading" style="animation-delay: 0.2s;">
           A Hands-On<br /><span class="gradient-text">Dev Studio.</span>
         </h1>
-        <p class="hero-sub" data-reveal>
+        <p class="hero-sub hero-animate" style="animation-delay: 0.3s;">
           Web development, feature builds, bug fixes, and technical audits for founders and small businesses who want direct access to the people doing the work—not another layer of account managers.
         </p>
-        <div class="hero-cta" data-reveal>
+        <div class="hero-cta hero-animate" style="animation-delay: 0.4s;">
           <a href="#contact" class="btn btn-primary" id="hero-cta-btn">
             Let's Build Together
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
           <a href="#services" class="btn btn-ghost">See What We Do</a>
         </div>
-        <div class="hero-stats" data-reveal>
+        <div class="hero-stats hero-animate" style="animation-delay: 0.5s;">
           <div class="stat-item">
             <span class="stat-number">0→1</span>
             <span class="stat-label">Builds</span>
@@ -210,19 +210,34 @@
           <p class="contact-sub">
             If you've got something that needs building or fixing, or just want to talk through an idea, reach out—we'd love to hear from you.
           </p>
-          <a href="mailto:altrador@outlook.com" class="contact-email" id="contact-email-link" aria-label="Send email to altrador@outlook.com">
-            altrador@outlook.com
-          </a>
-          <p class="contact-note">
-            No contact form. No ticketing system. Just a real email to real people.
-          </p>
-          <div class="contact-tags" aria-label="What we can help with">
-            <span>New Projects</span>
-            <span>Feature Builds</span>
-            <span>Bug Fixes</span>
-            <span>Audits</span>
-            <span>Just an idea</span>
+          
+          <div class="contact-card">
+            <div class="contact-card-content">
+              <div class="contact-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <a href="mailto:altrador@outlook.com" class="contact-email" id="contact-email-link" aria-label="Send email to altrador@outlook.com">
+                altrador@outlook.com
+              </a>
+              <p class="contact-note">
+                No contact form. No ticketing system. Just a real email to real people.
+              </p>
+            </div>
+            
+            <div class="contact-divider" aria-hidden="true"></div>
+            
+            <div class="contact-footer">
+              <span class="contact-footer-title">What we can help with:</span>
+              <ul class="contact-tags" aria-label="What we can help with">
+                <li>New Projects</li>
+                <li>Feature Builds</li>
+                <li>Bug Fixes</li>
+                <li>Audits</li>
+                <li>Just an idea</li>
+              </ul>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
