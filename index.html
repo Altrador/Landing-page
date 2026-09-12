@@ -210,22 +210,48 @@
           <p class="contact-sub">
             If you've got something that needs building or fixing, or just want to talk through an idea, reach out—we'd love to hear from you.
           </p>
-          
+
+          <div class="contact-highlights" role="list" aria-label="What to expect">
+            <div class="contact-highlight" role="listitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Replies within 24 hours</span>
+            </div>
+            <div class="contact-highlight" role="listitem">
+              <span class="badge-dot" aria-hidden="true"></span>
+              <span>Open for new projects</span>
+            </div>
+            <div class="contact-highlight" role="listitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>Remote &amp; async-friendly</span>
+            </div>
+          </div>
+
           <div class="contact-card">
             <div class="contact-card-content">
               <div class="contact-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
-              <a href="mailto:altrador@outlook.com" class="contact-email" id="contact-email-link" aria-label="Send email to altrador@outlook.com">
-                altrador@outlook.com
-              </a>
+              <div class="contact-email-row">
+                <a href="mailto:altrador@outlook.com?subject=Let%27s%20build%20something" class="contact-email" id="contact-email-link" aria-label="Send email to altrador@outlook.com">
+                  altrador@outlook.com
+                </a>
+                <button type="button" class="copy-email-btn" id="copy-email-btn" data-email="altrador@outlook.com" aria-label="Copy email address to clipboard">
+                  <span class="copy-icon copy-icon--copy" aria-hidden="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  </span>
+                  <span class="copy-icon copy-icon--check" aria-hidden="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="copy-label" id="copy-label">Copy</span>
+                </button>
+              </div>
               <p class="contact-note">
                 No contact form. No ticketing system. Just a real email to real people.
               </p>
             </div>
-            
+
             <div class="contact-divider" aria-hidden="true"></div>
-            
+
             <div class="contact-footer">
               <span class="contact-footer-title">What we can help with:</span>
               <ul class="contact-tags" aria-label="What we can help with">
