@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Altrador is a hands-on dev studio offering web development, feature builds, bug fixes, and technical audits. Direct access to the people doing the work—no account managers." />
+  <meta name="keywords" content="dev studio, web development, feature builds, bug fixes, technical audits, founders, small business" />
+  <meta property="og:title" content="Altrador — A Hands-On Dev Studio" />
+  <meta property="og:description" content="Web development, feature builds, bug fixes, and technical audits for founders and small businesses." />
+  <meta property="og:type" content="website" />
+  <title>Altrador — A Hands-On Dev Studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrapper" id="top" role="banner">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="#top" class="nav-logo" aria-label="Altrador home">
+        <img src="assets/logo.svg" alt="Altrador logo icon" class="nav-logo-img" width="32" height="32" />
+        <span class="nav-logo-text">Altrador</span>
+      </a>
+      <button class="nav-hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#philosophy" class="nav-link">Philosophy</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme">
+        <span class="theme-icon theme-icon--sun" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </span>
+        <span class="theme-icon theme-icon--moon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-badge" data-reveal>
+          <span class="badge-dot" aria-hidden="true"></span>
+          Available for new projects
+        </div>
+        <h1 class="hero-heading" id="hero-heading" data-reveal>
+          A Hands-On<br /><span class="gradient-text">Dev Studio.</span>
+        </h1>
+        <p class="hero-sub" data-reveal>
+          Web development, feature builds, bug fixes, and technical audits for founders and small businesses who want direct access to the people doing the work—not another layer of account managers.
+        </p>
+        <div class="hero-cta" data-reveal>
+          <a href="#contact" class="btn btn-primary" id="hero-cta-btn">
+            Let's Build Together
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#services" class="btn btn-ghost">See What We Do</a>
+        </div>
+        <div class="hero-stats" data-reveal>
+          <div class="stat-item">
+            <span class="stat-number">0→1</span>
+            <span class="stat-label">Builds</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number">Direct</span>
+            <span class="stat-label">Communication</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number">No</span>
+            <span class="stat-label">Middlemen</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label">What We Do</span>
+          <h2 class="section-title" id="services-heading">Built by the people<br />who actually build it.</h2>
+          <p class="section-desc">We roll up our sleeves and do the work ourselves. Every project, every line of code, every audit—done by the people you talk to.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card" data-reveal data-delay="0" aria-labelledby="svc-web-title">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <h3 class="card-title" id="svc-web-title">Web Development</h3>
+            <p class="card-desc">Full-stack web applications from scratch. Whether it's a marketing site, a SaaS dashboard, or a complex platform—we build it right, the first time.</p>
+            <ul class="card-tags" aria-label="Technologies">
+              <li>React / Next.js</li><li>Node.js</li><li>Databases</li><li>APIs</li>
+            </ul>
+          </article>
+          <article class="service-card service-card--accent" data-reveal data-delay="100" aria-labelledby="svc-feature-title">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="card-title" id="svc-feature-title">Feature Builds</h3>
+            <p class="card-desc">Got an existing product that needs new functionality? We slot into your codebase, understand the context, and ship features that fit—no regressions, no shortcuts.</p>
+            <ul class="card-tags" aria-label="Capabilities">
+              <li>Integrations</li><li>UI Components</li><li>Backend Logic</li><li>Auth Flows</li>
+            </ul>
+          </article>
+          <article class="service-card" data-reveal data-delay="200" aria-labelledby="svc-bug-title">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <h3 class="card-title" id="svc-bug-title">Bug Fixes</h3>
+            <p class="card-desc">Production issues need fast, precise attention. We diagnose the root cause, not just the symptom, and deliver clean fixes with clear explanations of what went wrong and why.</p>
+            <ul class="card-tags" aria-label="Capabilities">
+              <li>Root Cause Analysis</li><li>Performance</li><li>Security Patches</li><li>Regression Testing</li>
+            </ul>
+          </article>
+          <article class="service-card" data-reveal data-delay="300" aria-labelledby="svc-audit-title">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="card-title" id="svc-audit-title">Technical Audits</h3>
+            <p class="card-desc">We review your codebase, architecture, and dependencies with fresh eyes. You get a plain-English report on risks, bottlenecks, and a prioritized action list—no fluff.</p>
+            <ul class="card-tags" aria-label="Audit types">
+              <li>Code Quality</li><li>Architecture</li><li>Security Review</li><li>Performance Audit</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="section philosophy" id="philosophy" aria-labelledby="philosophy-heading">
+      <div class="philosophy-bg-shape" aria-hidden="true"></div>
+      <div class="container">
+        <div class="philosophy-inner">
+          <div class="philosophy-text" data-reveal>
+            <span class="section-label">Our Philosophy</span>
+            <h2 class="section-title" id="philosophy-heading">Driven by<br /><span class="gradient-text">Curiosity.</span></h2>
+            <p class="philosophy-body">
+              We are a team with a shared interest in technology and problem-solving. We work across different areas as they come up, with a focus on curiosity and attention to detail.
+            </p>
+            <p class="philosophy-body">
+              We're curious about a lot of things—figuring it out as we go. That's not a disclaimer; it's the approach. The best solutions rarely come from people who stopped asking questions.
+            </p>
+            <div class="philosophy-principles" role="list">
+              <div class="principle" role="listitem">
+                <div class="principle-icon" aria-hidden="true">→</div>
+                <div><strong>Direct access.</strong> You talk to the engineer. Always.</div>
+              </div>
+              <div class="principle" role="listitem">
+                <div class="principle-icon" aria-hidden="true">→</div>
+                <div><strong>Honest scoping.</strong> We tell you what's realistic, not what you want to hear.</div>
+              </div>
+              <div class="principle" role="listitem">
+                <div class="principle-icon" aria-hidden="true">→</div>
+                <div><strong>Attention to detail.</strong> We sweat the small stuff so you don't have to.</div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-outline follow-btn" id="follow-along-btn" aria-label="Follow Altrador for updates">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              Follow along for whatever we end up sharing.
+            </a>
+          </div>
+          <div class="philosophy-visual" data-reveal aria-hidden="true">
+            <div class="terminal-card">
+              <div class="terminal-bar">
+                <span class="terminal-dot terminal-dot--red"></span>
+                <span class="terminal-dot terminal-dot--yellow"></span>
+                <span class="terminal-dot terminal-dot--green"></span>
+                <span class="terminal-title">altrador ~ process</span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">git clone</span> <span class="t-arg">your-idea</span></div>
+                <div class="terminal-line t-comment"># understand the problem first</div>
+                <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">npm run</span> <span class="t-arg">scope --honest</span></div>
+                <div class="terminal-line t-out">✓ No fluff detected</div>
+                <div class="terminal-line t-out">✓ Timeline is realistic</div>
+                <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">git commit</span> <span class="t-str">-m "ship it"</span></div>
+                <div class="terminal-line t-out">✓ Code reviewed</div>
+                <div class="terminal-line t-out">✓ Tests passing</div>
+                <div class="terminal-line t-out">✓ Ready to deploy</div>
+                <div class="terminal-line terminal-line--active"><span class="t-prompt">$</span> <span class="t-cmd">deploy</span> <span class="t-arg">--prod</span><span class="terminal-cursor">▋</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="contact-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="contact-inner" data-reveal>
+          <span class="section-label">Get In Touch</span>
+          <h2 class="contact-heading" id="contact-heading">Let's Talk.</h2>
+          <p class="contact-sub">
+            If you've got something that needs building or fixing, or just want to talk through an idea, reach out—we'd love to hear from you.
+          </p>
+          <a href="mailto:altrador@outlook.com" class="contact-email" id="contact-email-link" aria-label="Send email to altrador@outlook.com">
+            altrador@outlook.com
+          </a>
+          <p class="contact-note">
+            No contact form. No ticketing system. Just a real email to real people.
+          </p>
+          <div class="contact-tags" aria-label="What we can help with">
+            <span>New Projects</span>
+            <span>Feature Builds</span>
+            <span>Bug Fixes</span>
+            <span>Audits</span>
+            <span>Just an idea</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">Altrador</span>
+        <span class="footer-tagline">A Hands-On Dev Studio</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#services">Services</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="footer-year">2025</span> Altrador. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
