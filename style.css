@@ -825,6 +825,7 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+  overflow-x: auto;
 }
 
 .terminal-line {
@@ -1115,7 +1116,33 @@ ul { list-style: none; }
   color: var(--text-secondary);
   line-height: 1.75;
   max-width: 520px;
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-8);
+}
+
+/* Trust / expectation badges */
+.contact-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3) var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+.contact-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.contact-highlight svg {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+  opacity: 0.85;
 }
 
 .contact-card {
@@ -1166,6 +1193,15 @@ ul { list-style: none; }
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
+.contact-email-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
 .contact-email {
   display: inline-block;
   font-size: clamp(1.25rem, 3.5vw, 2.25rem);
@@ -1175,7 +1211,6 @@ ul { list-style: none; }
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: all var(--transition-base);
-  margin-bottom: var(--space-4);
   word-break: break-all;
 }
 
@@ -1183,6 +1218,39 @@ ul { list-style: none; }
   color: var(--accent-primary);
   text-shadow: 0 0 32px var(--accent-glow-strong);
 }
+
+.copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 2rem;
+  padding: 0 var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.copy-email-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-accent);
+  background: var(--bg-elevated);
+}
+
+.copy-icon { display: flex; align-items: center; justify-content: center; }
+.copy-icon--check { display: none; color: #4ade80; }
+
+.copy-email-btn.is-copied {
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.4);
+}
+
+.copy-email-btn.is-copied .copy-icon--copy  { display: none; }
+.copy-email-btn.is-copied .copy-icon--check { display: flex; }
 
 .contact-note {
   font-size: 0.875rem;
@@ -1298,6 +1366,59 @@ ul { list-style: none; }
 .footer-copy {
   font-size: 0.8rem;
   color: var(--text-muted);
+}
+
+/* ========================================================
+   DEVICE ADAPTATIONS
+   Fine-tune layout/typography/targets per screen size,
+   pointer type, and orientation.
+   ======================================================== */
+
+/* ---- Compact phones (~400px and under) ---- */
+@media (max-width: 420px) {
+  .hero-badge { font-size: 0.72rem; padding: var(--space-2) var(--space-3); }
+  .hero-cta { gap: var(--space-2); }
+  .btn { padding: 0 1rem; font-size: 0.82rem; }
+
+  .hero-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  .stat-divider { display: none; }
+
+  .terminal-body { padding: var(--space-4) var(--space-4) var(--space-6); }
+  .terminal-line { font-size: 0.75rem; }
+
+  .contact-card-content { padding: var(--space-8) var(--space-4); }
+  .contact-highlights { gap: var(--space-2) var(--space-4); }
+  .contact-highlight { font-size: 0.78rem; }
+
+  .service-card { padding: var(--space-6); }
+}
+
+/* ---- Touch/coarse-pointer devices: bigger tap targets ---- */
+@media (pointer: coarse) {
+  .btn { min-height: 44px; }
+  .theme-toggle { width: 44px; height: 44px; }
+  .nav-hamburger { padding: var(--space-3); }
+  .copy-email-btn { min-height: 36px; }
+  .nav-link { padding: var(--space-2) 0; }
+}
+
+/* ---- Short/landscape viewports (mobile landscape) ---- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero { min-height: auto; padding-top: 96px; }
+  .hero-content { padding-top: var(--space-6); padding-bottom: var(--space-10); }
+  .hero-scroll-hint { display: none; }
+}
+
+/* ---- Large desktop / wide screens ---- */
+@media (min-width: 1440px) {
+  :root { --max-width: 1320px; }
+  .hero-heading { font-size: clamp(3.25rem, 4.5vw, 5.25rem); }
+  .section-title { font-size: clamp(2.5rem, 3.25vw, 3.5rem); }
+  .services-grid { gap: var(--space-6); }
 }
 
 /* ========================================================

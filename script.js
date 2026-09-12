@@ -139,6 +139,50 @@
 
   sections.forEach(function (sec) { sectionObserver.observe(sec); });
 
+  /* ---- COPY EMAIL TO CLIPBOARD ---- */
+  const copyBtn = document.getElementById('copy-email-btn');
+
+  if (copyBtn) {
+    const copyLabel = document.getElementById('copy-label');
+    let copyResetTimer = null;
+
+    copyBtn.addEventListener('click', function () {
+      const email = copyBtn.getAttribute('data-email') || '';
+
+      function showCopied() {
+        copyBtn.classList.add('is-copied');
+        if (copyLabel) copyLabel.textContent = 'Copied!';
+        clearTimeout(copyResetTimer);
+        copyResetTimer = setTimeout(function () {
+          copyBtn.classList.remove('is-copied');
+          if (copyLabel) copyLabel.textContent = 'Copy';
+        }, 2000);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(showCopied).catch(function () {
+          /* Clipboard write failed (e.g. no permission) — link is still clickable */
+        });
+      } else {
+        // Fallback for older browsers without Clipboard API
+        const tempInput = document.createElement('textarea');
+        tempInput.value = email;
+        tempInput.setAttribute('readonly', '');
+        tempInput.style.position = 'absolute';
+        tempInput.style.left = '-9999px';
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+          document.execCommand('copy');
+          showCopied();
+        } catch (err) {
+          /* Copy unsupported — link is still clickable */
+        }
+        document.body.removeChild(tempInput);
+      }
+    });
+  }
+
   /* ---- FOOTER YEAR ---- */
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
